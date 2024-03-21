@@ -1,0 +1,31 @@
+[package]
+name = "l0g"
+description = "Opinionated l0gging facade meant for the no_std libraries"
+readme = "../README.md"
+license = "MIT"
+authors = [ "Gabriel Górski <glaeqen@gmail.com>" ]
+keywords = [
+  "embedded",
+  "log",
+  "format",
+  "no-std"
+]
+repository = "https://github.com/glaeqen/l0g"
+version = "1.0.0"
+edition = "2021"
+
+[features]
+defmt = ["dep:defmt", "l0g-macros/defmt"]
+log = ["dep:log", "l0g-macros/log"]
+
+[dependencies.l0g-macros]
+path = "../l0g-macros"
+version = "1"
+
+[dependencies.defmt]
+version = "0.3"
+optional = true
+
+[dependencies.log]
+version = "0.4"
+optional = true

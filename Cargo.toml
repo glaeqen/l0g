@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "l0g",
+    "l0g-macros",
+]
+resolver = "2"

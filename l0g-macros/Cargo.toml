@@ -1,0 +1,32 @@
+[package]
+name = "l0g-macros"
+description = "proc-macros for l0g crate"
+readme = "../README.md"
+license = "MIT"
+authors = [ "Gabriel Górski <glaeqen@gmail.com>" ]
+keywords = [
+  "embedded",
+  "log",
+  "format",
+  "no-std"
+]
+repository = "https://github.com/glaeqen/l0g"
+version = "1.0.0"
+edition = "2021"
+
+[lib]
+proc-macro = true
+
+[features]
+defmt = []
+log = []
+
+[dependencies]
+proc-macro-error = "1"
+proc-macro2 = "1"
+quote = "1"
+
+[dependencies.syn]
+version = "2"
+default-features = false
+features = ["derive", "parsing", "printing", "proc-macro"]
